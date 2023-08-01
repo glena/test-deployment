@@ -1,6 +1,32 @@
 import * as pulumi from "@pulumi/pulumi";
 import * as aws from "@pulumi/aws";
 import * as awsx from "@pulumi/awsx";
+import * as pulumiservice from "@pulumi/pulumiservice";
+
+const config = new pulumi.Config("aws");
+
+const deploymentSettings = new pulumiservice.DeploymentSettings("deploymentSettings", {
+    operationContext: {
+        environmentVariables: {
+            "aws:accessKey": "AKIAZD726CKNDPAQFT7D",
+            "aws:region": "us-east-2",
+            "aws:secretKey": config.requireSecret("secretKey"),
+        },
+        options: {},
+    },
+    organization: "glena",
+    project: "aws-typescript",
+    sourceContext: {
+        git: {
+            branch: "refs/heads/main",
+            repoDir: ".",
+            repoUrl: "https://github.com/glena/test-deployment",
+        },
+    },
+    stack: "test-deployment",
+}, {
+    protect: true,
+});
 
 // Create an AWS resource (S3 Bucket)
 const bucket = new aws.s3.Bucket("my-bucket");
