@@ -23,7 +23,7 @@ const deploymentSettings = new pulumiservice.DeploymentSettings("deploymentSetti
             repoUrl: "https://github.com/glena/test-deployment",
         },
     },
-    stack: "test-deployment",
+    stack: "dev",
 }, {
     protect: true,
 });
