@@ -29,8 +29,8 @@ const deploymentSettings = new pulumiservice.DeploymentSettings("deploymentSetti
 });
 
 // Create an AWS resource (S3 Bucket)
-const bucket = new aws.s3.Bucket("my-first-bucket");
-const bucket2 = new aws.s3.Bucket("my-second-bucket");
+const bucket = new aws.s3.Bucket("first-bucket");
+const bucket2 = new aws.s3.Bucket("second-bucket");
 
 // Export the name of the bucket
 export const bucketName = bucket.id;
