@@ -8,14 +8,12 @@ const config = new pulumi.Config("aws");
 const deploymentSettings = new pulumiservice.DeploymentSettings("deploymentSettings", {
     operationContext: {
         environmentVariables: {
-            "aws:accessKey": "AKIAZD726CKNDPAQFT7D",
             "aws:region": "us-east-2",
-            "aws:secretKey": config.requireSecret("secretKey"),
         },
         options: {},
     },
-    organization: "glena",
-    project: "aws-typescript",
+    organization: "german",
+    project: "german-test",
     sourceContext: {
         git: {
             branch: "refs/heads/main",
@@ -28,10 +26,28 @@ const deploymentSettings = new pulumiservice.DeploymentSettings("deploymentSetti
     protect: true,
 });
 
-// Create an AWS resource (S3 Bucket)
-const bucket = new aws.s3.Bucket("my-first-bucket");
-const bucket2 = new aws.s3.Bucket("my-second-bucket");
+// // Create an AWS resource (S3 Bucket)
+// const bucket = new aws.s3.Bucket("my-first-bucket");
+// const bucket2 = new aws.s3.Bucket("my-second-bucket");
 
-// Export the name of the bucket
-export const bucketName = bucket.id;
-export const secondBucketName = bucket2.id;
+// // Export the name of the bucket
+// export const bucketName = bucket.id;
+// export const secondBucketName = bucket2.id;
+
+// const webhook = new pulumiservice.Webhook("example-webhook", {
+//     active: true,
+//     displayName: "german webhook example",
+//     organizationName: "pulumi",
+//     projectName: "german-test",
+//     stackName: "dev",
+//     payloadUrl: "https://example.com/webhook",
+// });
+
+// const team = new pulumiservice.Team("german-test-team", {
+//     organizationName: "pulumi",
+//     displayName: "german test team",
+//     description: "german test team",
+//     teamType: "pulumi",
+//     name: "german-test-team",
+//     members: ["glena"]
+// });
