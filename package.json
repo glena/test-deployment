@@ -2,13 +2,10 @@
     "name": "aws-typescript",
     "main": "index.js",
     "devDependencies": {
-        "@types/node": "^16"
+        "@types/node": "^18"
     },
     "dependencies": {
-        "@pulumi/aws": "^5.0.0",
-        "@pulumi/awsx": "^1.0.0",
-        "@pulumi/pulumi": "^3.0.0",
-        "@pulumi/pulumiservice": "^0.10.0"
+        "@pulumi/pulumi": "^3.0.0"
     },
     "engines": {
         "node": "18"
