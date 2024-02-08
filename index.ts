@@ -21,7 +21,6 @@ async function wait(time) {
     return new Promise((resolve) => setTimeout(resolve, time))
 }
 
-
 console.log('Lets chill!')
 await wait(30000)
 console.log('Back to work!')
