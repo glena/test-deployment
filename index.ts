@@ -1,3 +1,4 @@
+
 // import * as aws from "@pulumi/aws";
 
 // const bucket = new aws.s3.Bucket("my-bucket", {
@@ -21,7 +22,7 @@ async function wait(time) {
 }
 
 console.log('Lets chill!')
-await wait(30000)
+//await wait(30000)
 console.log('Back to work!')
 
 
