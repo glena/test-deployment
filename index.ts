@@ -18,6 +18,14 @@ console.log('SETTINGS_VAR_1', process.env['SETTINGS_VAR_1']);
 console.log('SETTINGS_VAR_2_SECRET', process.env['SETTINGS_VAR_2_SECRET']);
 
 
+async function wait(time) {
+    return new Promise((resolve) => setTimeout(resolve, time))
+}
+
+console.log('Lets chill!')
+//await wait(30000)
+console.log('Back to work!')
+
 
 
 export const someOutput = "the value";
