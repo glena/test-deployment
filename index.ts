@@ -1,19 +1,23 @@
 
-// import * as aws from "@pulumi/aws";
+import * as aws from "@pulumi/aws";
 
-// const bucket = new aws.s3.Bucket("my-bucket", {
-//     acl: "private",
-//     tags: {
-//         Environment: "Dev",
-//         Name: "My bucket",
-//     },
-// });
-
-// export const bucketName = bucket.id;
+const bucket = new aws.s3.Bucket("german-test-bucket", {
+    acl: "private",
+    tags: {
+        Environment: "Dev",
+        Name: "german-test-bucket",
+    },
+});
 
 
-export const someOutput2 = "the value";
-export const someOutput3 = "the value";
-export const someOutput4 = "the value";
 
-export const someOutput = "the value";
+const bucket2 = new aws.s3.Bucket("german-test-bucket2", {
+    acl: "private",
+    tags: {
+        Environment: "Dev",
+        Name: "german-test-bucket2",
+    },
+});
+ 
+export const bucketName = bucket.id;
+export const bucket2Name = bucket2.id;
