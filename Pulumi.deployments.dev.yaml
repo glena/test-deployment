@@ -1,4 +1,6 @@
 deploymentSettings:
+  executorContext: 
+    executorImage: {}
   sourceContext:
     git:
       branch: demo-agent-dev
