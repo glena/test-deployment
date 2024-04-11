@@ -1,6 +1,5 @@
 deploymentSettings:
-  executorContext: 
-    executorImage: {}
+  executorContext: {}
   sourceContext:
     git:
       branch: demo-agent-dev
@@ -14,6 +13,6 @@ deploymentSettings:
       aws: null
       azure: null
       gcp: null
-    options: 
-      skipIntermediateDeployments: true
+    options:
+      skipInstallDependencies: true
   agentPoolID: 51035bee-a4d6-4b63-9ff6-418775c5da8d
