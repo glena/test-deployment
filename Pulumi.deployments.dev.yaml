@@ -1,0 +1,10 @@
+deploymentSettings:
+  sourceContext:
+    git:
+      branch: demo-agent-dev
+      repoDir: .
+  gitHub:
+    repository: glena/test-deployment
+    deployCommits: true
+    previewPullRequests: true
+  agentPoolID: 51035bee-a4d6-4b63-9ff6-418775c5da8d
