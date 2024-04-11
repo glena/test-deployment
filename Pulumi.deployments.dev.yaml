@@ -1,4 +1,5 @@
 deploymentSettings:
+  executorContext: {}
   sourceContext:
     git:
       branch: demo-agent-dev
@@ -7,4 +8,11 @@ deploymentSettings:
     repository: glena/test-deployment
     deployCommits: true
     previewPullRequests: true
+  operationContext:
+    oidc:
+      aws: null
+      azure: null
+      gcp: null
+    options: 
+      skipIntermediateDeployments: true
   agentPoolID: 51035bee-a4d6-4b63-9ff6-418775c5da8d
